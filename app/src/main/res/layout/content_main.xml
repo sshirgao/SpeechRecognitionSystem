@@ -17,16 +17,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:text="Please click on the play button to play the video" />
 
-        <Button
-            android:id="@+id/playme"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="play me"
-            android:onClick="open_Youtube"/>
+        <!--<Button-->
+            <!--android:id="@+id/playme"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:text="play me"-->
+            <!--android:onClick="open_Youtube"/>-->
     </LinearLayout>
 
 </RelativeLayout>

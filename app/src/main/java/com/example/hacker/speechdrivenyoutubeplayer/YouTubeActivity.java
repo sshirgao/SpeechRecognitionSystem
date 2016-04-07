@@ -38,7 +38,7 @@ public class YouTubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     @Override
     public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean wasRestored) {
-        player.cueVideo("Wji-BZ0oCwg");
+        player.loadVideo("Wji-BZ0oCwg");
     }
 
     @Override
