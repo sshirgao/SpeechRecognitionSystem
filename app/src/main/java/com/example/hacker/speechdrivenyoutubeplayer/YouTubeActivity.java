@@ -1,7 +1,6 @@
 package com.example.hacker.speechdrivenyoutubeplayer;
 
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -15,6 +14,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YouTubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener{
 
     public static final String YOUTUBE_API_KEY = "YOUR API KEY";
+    public String play_url = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +31,15 @@ public class YouTubeActivity extends YouTubeBaseActivity implements YouTubePlaye
                         .setAction("Action", null).show();
             }
         });
-
+        this.play_url = this.getIntent().getStringExtra("URL");
         YouTubePlayerView youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
-        youTubeView.initialize("AIzaSyAkXrc588MiUdPo9eb3nRVrUXoHseBAXQ8", this);
+        youTubeView.initialize("AIzaSyCvx8WDAbKhx7QUfRnmsa3XUd3lKx35HMs", this);
+
     }
 
     @Override
     public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean wasRestored) {
-        player.loadVideo("Wji-BZ0oCwg");
+        player.loadVideo(this.play_url);
     }
 
     @Override

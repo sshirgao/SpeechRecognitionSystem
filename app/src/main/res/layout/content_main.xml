@@ -4,10 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.hacker.speechdrivenyoutubeplayer.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -15,13 +11,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/black">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:textAlignment="center"
-            android:text="Please click on the play button to play the video" />
+            android:text="Please click on the mic icon to record your instructions."
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/informative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/white"/>
+
 
         <!--<Button-->
             <!--android:id="@+id/playme"-->
